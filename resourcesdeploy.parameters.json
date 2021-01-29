@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storagePrefix": {
+      "value": "storage"
+    },
+    "storageSKU": {
+      "value": "Standard_GRS"
+    },
+    "appServicePlanName": {
+      "value": "appserviceplan"
+    },
+    "webAppName": {
+      "value": "webapp"
+    },
+    "resourceTags": {
+      "value": {
+        "Environment": "Production",
+        "Project": "Tutorial"
+      }
+    },
+    "location":{
+        "value": "canadaeast" 
+    }
+
+  }
+}

@@ -1,10 +1,13 @@
 $rg = "rg-vm-007"
 $loc = "canadacentral"
+$templateFile = "F:\Azure\PowerShellScripts\template_vm.json"
+$parameterFile= "F:\Azure\PowerShellScripts\parameters.json"
 
-#New-AzResourceGroup -Name $rg -Location $loc
+New-AzResourceGroup -ResourceGroupName $rg -Location $loc
 
 New-AzResourceGroupDeployment `
-  -Name ExampleDeployment `
+  -Name addappserviceplan `
   -ResourceGroupName $rg `
-    -Location $loc `
-  -TemplateUri https://raw.githubusercontent.com/MarcLab1/PowerShellScripts/master/vm_parameters.json
+  -TemplateFile $templateFile 
+  #`
+  #-TemplateParameterFile $parameterFile
